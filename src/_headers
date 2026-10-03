@@ -1,0 +1,26 @@
+# Antete HTTP pentru Cloudflare Pages (copiat în dist/ la build).
+# Pagina e statică; antetele de securitate dublează meta-CSP din index.html, iar cache-ul
+# păstrează pagina și service worker-ul mereu proaspete (actualizările ajung la primul reload).
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+
+/index.html
+  Cache-Control: no-cache
+
+/
+  Cache-Control: no-cache
+
+/sw.js
+  Cache-Control: no-cache
+
+/manifest.webmanifest
+  Cache-Control: public, max-age=3600
+
+/icon-*.png
+  Cache-Control: public, max-age=31536000, immutable

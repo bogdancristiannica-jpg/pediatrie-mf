@@ -1,8 +1,8 @@
 // Asamblează sursele într-un singur fișier HTML, fără dependențe externe.
 // Produce:
-//   dist/index.html     documentul complet (doctype, meta, manifest, service worker) — pentru GitHub Pages și uz local
+//   dist/index.html     documentul complet (doctype, meta, manifest, service worker) — pentru Cloudflare/GitHub Pages și uz local
 //   dist/artifact.html  același conținut fără învelișul de document — pentru publicarea ca artefact claude.ai
-//   dist/sw.js, dist/manifest.webmanifest, dist/icon-*.png
+//   dist/sw.js, dist/manifest.webmanifest, dist/icon-*.png, dist/_headers (antete HTTP pentru Cloudflare Pages)
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { resolve, dirname } from "node:path";
@@ -72,6 +72,7 @@ if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
   writeFileSync(dist("sw.js"), read(src("sw.js")).replace(/__BUILD_VERSION__/g, ver));
   copyFileSync(src("manifest.webmanifest"), dist("manifest.webmanifest"));
   for (const f of ["icon-180.png", "icon-192.png", "icon-512.png"]) if (existsSync(src(`assets/${f}`))) copyFileSync(src(`assets/${f}`), dist(f));
+  copyFileSync(src("_headers"), dist("_headers"));
   writeFileSync(dist(".nojekyll"), "");
   return { ver, bytes: Buffer.byteLength(page) };
 }

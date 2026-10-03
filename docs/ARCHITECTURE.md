@@ -23,7 +23,7 @@ flowchart LR
   B[scripts/build.mjs] --> A[dist/artifact.html<br/>pentru claude.ai]
   B --> I[dist/index.html<br/>document complet + CSP + PWA]
   B --> SW[dist/sw.js<br/>manifest, pictograme]
-  I --> P[GitHub Pages]
+  I --> P[Cloudflare Pages<br/>sau GitHub Pages]
   I --> S[scripts/serve.mjs<br/>localhost:4173]
   S --> E2E[Playwright<br/>Chromium · WebKit · iPhone]
 ```
