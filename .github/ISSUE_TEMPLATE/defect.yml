@@ -1,0 +1,26 @@
+name: Defect de funcționare
+description: Ceva nu merge în pagină (căutare, calculator, afișare)
+title: "[defect] "
+labels: [defect]
+body:
+  - type: textarea
+    id: pasi
+    attributes:
+      label: Pașii de reproducere
+    validations:
+      required: true
+  - type: input
+    id: dispozitiv
+    attributes:
+      label: Dispozitiv și browser
+      placeholder: ex. iPhone 15, iOS 27, Safari / Windows 11, Chrome 141
+    validations:
+      required: true
+  - type: textarea
+    id: asteptat
+    attributes:
+      label: Ce te așteptai să se întâmple
+  - type: textarea
+    id: captura
+    attributes:
+      label: Captură de ecran (opțional)

@@ -1,0 +1,42 @@
+name: Corectură de conținut clinic
+description: O doză, un prag, o recomandare care nu corespunde ghidului în vigoare
+title: "[clinic] "
+labels: [clinic]
+body:
+  - type: input
+    id: fisa
+    attributes:
+      label: Fișa
+      placeholder: ex. Otită medie acută
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Textul actual
+      description: Copiază exact ce scrie acum în pagină.
+    validations:
+      required: true
+  - type: textarea
+    id: propus
+    attributes:
+      label: Textul propus
+    validations:
+      required: true
+  - type: textarea
+    id: sursa
+    attributes:
+      label: Sursa
+      description: Ghidul, anul versiunii, recomandarea sau pagina, adresa. Fără sursă, corectura nu se aplică.
+    validations:
+      required: true
+  - type: dropdown
+    id: severitate
+    attributes:
+      label: Severitate
+      options:
+        - Critică (doză sau prag care poate face rău)
+        - Majoră (recomandare greșită sau omisiune importantă)
+        - Minoră (formulare, detaliu)
+    validations:
+      required: true

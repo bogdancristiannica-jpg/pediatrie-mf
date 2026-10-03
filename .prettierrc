@@ -1,0 +1,6 @@
+{
+  "printWidth": 160,
+  "singleQuote": false,
+  "trailingComma": "es5",
+  "overrides": [{ "files": ["src/data/*.js"], "options": { "printWidth": 400 } }]
+}
