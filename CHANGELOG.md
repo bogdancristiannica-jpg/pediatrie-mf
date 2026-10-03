@@ -3,6 +3,17 @@
 Formatul urmează [Keep a Changelog](https://keepachangelog.com/ro/1.1.0/); versiunile urmează [SemVer](https://semver.org/lang/ro/).
 Schimbările de conținut clinic poartă sursa în paranteză.
 
+## [0.1.1] — 2026-10-03
+
+### Schimbat
+
+- Publicarea principală trece pe Cloudflare Pages (build din depozit, fără GitHub Actions); antete HTTP în `src/_headers`
+  (securitate; `no-cache` pentru pagină și service worker).
+- Workflow-urile GitHub (CI, Pages) pornesc manual până când contul are acces la runnerele Actions; verificările rulează
+  local cu `npm run check`.
+- Acțiunile GitHub actualizate la versiunile curente (checkout v7, setup-node v7, upload-artifact v7,
+  upload-pages-artifact v5, deploy-pages v5), conform propunerilor Dependabot #1–#5.
+
 ## [0.1.0] — 2026-10-03
 
 ### Adăugat

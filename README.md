@@ -8,7 +8,7 @@ semnele de alarmă și perioadele de excludere din colectivitate.
 Pagina este un singur fișier HTML, fără server, fără cont, fără urmărire. Merge pe iPhone (Safari), pe Chrome
 (Windows/Mac) și fără internet după prima deschidere.
 
-**Adresa publicată:** https://bogdancristiannica-jpg.github.io/pediatrie-mf/ (se activează la primul push pe `main`)
+**Adresa publicată:** https://pediatrie-mf.pages.dev (Cloudflare Pages; vezi „Publicare” mai jos)
 
 > Conținutul este un instrument de lucru pentru medici, nu înlocuiește judecata clinică și nici RCP-ul produsului prescris.
 > Dozele sunt calculate aritmetic din sursele citate pe fiecare rând; plafoanele și vârstele minime se verifică în RCP-ul
@@ -67,6 +67,25 @@ Detalii în [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
    Marcaje în text: `[[...]]` doză sau interval, `**...**` accent, `*...*` italic, `{{...}}` neverificat.
 3. `npm run validate && npm test`, apoi `npm run build` și verifică în browser.
 4. Actualizează `docs/SURSE.md` și `CHANGELOG.md`. Deschide un pull request; șablonul cere sursa.
+
+## Publicare
+
+Publicarea principală este pe **Cloudflare Pages**, care construiește direct din acest depozit, pe serverele Cloudflare,
+fără GitHub Actions. Configurare, o singură dată, din panoul Cloudflare:
+
+1. Workers & Pages → Create → Pages → **Connect to Git** → depozitul `pediatrie-mf`.
+2. Build command: `npm ci && npm run build` · Build output directory: `dist` · Production branch: `main`.
+3. Variabilă de mediu: `NODE_VERSION` = `22` (Cloudflare citește și `.nvmrc`, dar variabila e garantată).
+4. Save and Deploy. Fiecare push pe `main` republică; fiecare pull request primește o adresă de previzualizare.
+5. Domeniu propriu (opțional): Custom domains → Set up a custom domain. Pentru un domeniu `.dev`, HTTPS e obligatoriu
+   (listă HSTS preîncărcată); Cloudflare îl oferă automat.
+
+Antetele HTTP (securitate, cache corect pentru `sw.js` și `index.html`) sunt în `src/_headers`, copiat în `dist/` la build.
+
+**GitHub Pages** rămâne disponibil ca alternativă (`.github/workflows/pages.yml`), dar cele două workflow-uri GitHub
+(CI și Pages) pornesc deocamdată **manual** (Actions → Run workflow): contul nu are acces la runnerele GitHub Actions
+cât timp metoda de plată e marcată invalidă. Până atunci, verificările obligatorii rulează local: `npm run check`
+înainte de fiecare push. Reactivarea declanșării automate: instrucțiunile din comentariul fiecărui workflow.
 
 ## Pe iPhone
 

@@ -1,10 +1,13 @@
-# Publică dist/ pe GitHub Pages la fiecare push pe main (după ce CI a trecut nu e garantat; Pages construiește separat,
-# dar rulează aceleași verificări înainte de publicare, ca să nu publice o versiune stricată).
+# Publicare alternativă pe GitHub Pages. Publicarea principală este pe Cloudflare Pages (vezi README, „Publicare”),
+# care construiește direct din depozit, fără GitHub Actions.
+#
+# Pornire MANUALĂ (Actions → Pages → Run workflow). Dacă vrei din nou publicare automată pe GitHub Pages,
+# pune la loc declanșarea:
+#   push:
+#     branches: [main]
 name: Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -21,8 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -33,7 +36,7 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
@@ -45,4 +48,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

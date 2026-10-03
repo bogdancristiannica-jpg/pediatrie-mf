@@ -1,10 +1,16 @@
-# Verificare la fiecare push și pull request: date, lint, build, teste unitare, teste cap-la-cap pe Chromium și WebKit.
+# Verificare completă: date, lint, build, teste unitare, teste cap-la-cap pe Chromium și WebKit.
+#
+# Pornire MANUALĂ (Actions → CI → Run workflow) până când contul are din nou acces la runnerele GitHub Actions
+# (blocate cât timp metoda de plată a contului e marcată invalidă). Când accesul revine, se reactivează
+# declanșarea automată punând la loc:
+#   push:
+#     branches: [main]
+#   pull_request:
+# Până atunci, aceleași verificări se rulează local cu `npm run check` înainte de fiecare push.
 name: CI
 
 on:
-  push:
-    branches: [main]
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,8 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -33,7 +39,7 @@ jobs:
       - run: npm run test:e2e
         env:
           CI: "true"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: playwright-report
