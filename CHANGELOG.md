@@ -10,7 +10,9 @@ Schimbările de conținut clinic poartă sursa în paranteză.
 - Ordinea secțiunilor unei fișe revine la cea clinică: decizia-cheie, semne de alarmă, simptome, diagnostic, tratament,
   nu se recomandă, sursa (decizia lui Bogdan). Ca doza să rămână pe primul ecran al telefonului, doza principală intră
   în rândul „Decizia-cheie” la 22 de fișe; valorile sunt cele deja prezente în secțiunea Tratament a fiecărei fișe, fără
-  conținut clinic nou.
+  conținut clinic nou. La APLV și GEA, decizia-cheie păstrează condiția din sursă: intervalul de eliminare pe subtip
+  (2–4 săptămâni non-IgE, 1–2 săptămâni IgE; ESPGHAN 2024) și regimul de 50 ml/kg doar la deshidratare clinică
+  (NICE CG84 1.3.2.2), după revizia Codex pe PR #9.
 
 ## [0.1.2] — 2026-10-04
 

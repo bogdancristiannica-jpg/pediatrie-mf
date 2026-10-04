@@ -45,7 +45,7 @@ const C = [
  src:[["NASPGHAN/ESPGHAN 2018 (fără actualizare)","https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5958910/"],["NICE NG1 (permite probă cu alginat 1–2 săptămâni)",NICE("ng1")]]},
 
 {id:"aplv", g:"nn", n:"Alergia la proteinele laptelui de vacă (APLV)", alt:"alergie lapte, CMPA, hidrolizat, aminoacizi, CoMiSS, FPIES, proctocolită",
- key:"Supradiagnosticată (prevalență reală sub 1%): eliminare diagnostică [[2–4 săptămâni]], urmată obligatoriu de test de provocare orală.",
+ key:"Supradiagnosticată (prevalență reală sub 1%): eliminare diagnostică [[2–4 săptămâni]] (non-IgE) sau [[1–2 săptămâni]] (IgE), urmată obligatoriu de test de provocare orală.",
  sym:["IgE-mediată: urticarie, angioedem, vărsături imediate, anafilaxie.","Non-IgE: rectoragie (proctocolită), vărsături, diaree, eczemă, stagnare ponderală, enterocolită indusă de proteine alimentare (FPIES)."],
  dx:["Dietă de eliminare diagnostică 2–4 săptămâni (non-IgE) sau 1–2 săptămâni (IgE), apoi test de provocare orală.","Excepții de la provocare: anafilaxie, IgE specifice foarte mari.","Scorul CoMiSS este instrument de alertă, nu de diagnostic; pragul nu este consensual."],
  alarm:["Anafilaxie, stagnare ponderală, FPIES severă → specialist."],
@@ -145,7 +145,7 @@ const C = [
  src:[["NHS Highland, oct. 2024","https://www.rightdecisions.scot.nhs.uk/tam-treatments-and-medicines-nhs-highland/paediatric-therapeutic-guidelines/respiratory-paediatric-guidelines/croup-paediatric-guidelines/"],["Cochrane 2023","https://pubmed.ncbi.nlm.nih.gov/36626194/"]], uv:"NICE CKS (crup) nu a putut fi verificat."},
 
 {id:"gea", g:"sm", n:"Gastroenterită acută (GEA)", alt:"diaree, vărsături, deshidratare, durere de burtă, SRO, Smecta, Enterol, Hidrasec, rotavirus, probiotice",
- key:"Rehidratare orală cu soluție hipoosmolară, [[50 ml/kg în 4 h]] plus întreținere, și alimentație continuată; fără loperamid și fără antibiotic de rutină.",
+ key:"Cu deshidratare clinică: SRO hipoosmolară [[50 ml/kg în 4 h]] plus întreținere; fără deshidratare, alimentație și lichide continuate. Fără loperamid și fără antibiotic de rutină.",
  sym:["≥3 scaune moi sau apoase în 24 h, cu sau fără febră și vărsături; durată sub 7 zile."],
  dx:["Scala clinică de deshidratare: 0 = absentă; 1–4 = ușoară; 5–8 = moderată sau severă.","Analizele nu sunt necesare de rutină."],
  alarm:["Deshidratare moderată sau severă, refuzul lichidelor, aspect toxic, diaree sanguinolentă cu febră."],
