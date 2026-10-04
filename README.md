@@ -8,7 +8,8 @@ semnele de alarmă și perioadele de excludere din colectivitate.
 Pagina este un singur fișier HTML, fără server, fără cont, fără urmărire. Merge pe iPhone (Safari), pe Chrome
 (Windows/Mac) și fără internet după prima deschidere.
 
-**Adresa publicată:** https://pediatrie-mf.pages.dev (Cloudflare Pages; vezi „Publicare” mai jos)
+**Adresa publicată:** pe Cloudflare, `pediatrie-mf.pages.dev` (varianta Pages) sau `pediatrie-mf.<subdomeniu>.workers.dev`
+(varianta Workers); vezi „Publicare” mai jos. Adresa definitivă se trece aici după prima publicare.
 
 > Conținutul este un instrument de lucru pentru medici, nu înlocuiește judecata clinică și nici RCP-ul produsului prescris.
 > Dozele sunt calculate aritmetic din sursele citate pe fiecare rând; plafoanele și vârstele minime se verifică în RCP-ul
@@ -70,17 +71,33 @@ Detalii în [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Publicare
 
-Publicarea principală este pe **Cloudflare Pages**, care construiește direct din acest depozit, pe serverele Cloudflare,
-fără GitHub Actions. Configurare, o singură dată, din panoul Cloudflare:
+Publicarea principală este pe **Cloudflare**, care construiește direct din acest depozit, pe serverele Cloudflare, fără
+GitHub Actions. Panoul Cloudflare oferă două variante; depozitul e pregătit pentru amândouă. Etichetele de mai jos sunt cele
+din documentația oficială la 4 octombrie 2026 (paginile se schimbă; dacă nu le mai găsești, caută „Workers Builds” sau
+„Pages Git integration” în developers.cloudflare.com).
 
-1. Workers & Pages → Create → Pages → **Connect to Git** → depozitul `pediatrie-mf`.
-2. Build command: `npm ci && npm run build` · Build output directory: `dist` · Production branch: `main`.
-3. Variabilă de mediu: `NODE_VERSION` = `22` (Cloudflare citește și `.nvmrc`, dar variabila e garantată).
-4. Save and Deploy. Fiecare push pe `main` republică; fiecare pull request primește o adresă de previzualizare.
-5. Domeniu propriu (opțional): Custom domains → Set up a custom domain. Pentru un domeniu `.dev`, HTTPS e obligatoriu
-   (listă HSTS preîncărcată); Cloudflare îl oferă automat.
+**Varianta A, Workers cu fișiere statice** (direcția actuală a Cloudflare; folosește `wrangler.jsonc` din depozit):
 
-Antetele HTTP (securitate, cache corect pentru `sw.js` și `index.html`) sunt în `src/_headers`, copiat în `dist/` la build.
+1. Workers & Pages → **Create application** → **Import a repository** (sau „Connect to Git”) → depozitul `pediatrie-mf`.
+2. Numele Worker-ului: `pediatrie-mf` (trebuie să fie identic cu `name` din `wrangler.jsonc`, altfel build-ul eșuează).
+3. Build command: `npm ci && npm run build` · Deploy command: `npx wrangler deploy` (valoarea implicită) · Root directory: gol.
+4. Deploy. Adresa: `https://pediatrie-mf.<subdomeniul-contului>.workers.dev`. Fiecare push pe `main` republică.
+5. Publicare manuală de pe Mac, fără panou: `npx wrangler login` o singură dată, apoi `npm run deploy`.
+
+**Varianta B, Pages** (dacă în panou apare încă fila Pages):
+
+1. Workers & Pages → **Create application** → **Pages** → **Connect to Git** → depozitul `pediatrie-mf` → Begin setup.
+2. Production branch: `main` · Build command: `npm ci && npm run build` · Build output directory: `dist`.
+3. Save and Deploy. Adresa: `https://pediatrie-mf.pages.dev`. Fiecare pull request primește o adresă de previzualizare.
+
+Versiunea Node: ambele variante citesc `.nvmrc` (= 22); dacă vrei să fii sigur, adaugă variabila `NODE_VERSION` = `22`
+(ordinea de prioritate documentată: variabila, apoi `.nvmrc`, apoi `.node-version`).
+
+Domeniu propriu (opțional, ambele variante): în proiect, **Custom domains** → Set up a custom domain. Pentru un domeniu
+`.dev`, HTTPS e obligatoriu (listă HSTS preîncărcată); Cloudflare îl oferă automat.
+
+Antetele HTTP (securitate, cache corect pentru `sw.js` și `index.html`) sunt în `src/_headers`, copiat în `dist/` la build;
+fișierul e citit la fel de Pages și de Workers.
 
 **GitHub Pages** rămâne disponibil ca alternativă (`.github/workflows/pages.yml`), dar cele două workflow-uri GitHub
 (CI și Pages) pornesc deocamdată **manual** (Actions → Run workflow): contul nu are acces la runnerele GitHub Actions
