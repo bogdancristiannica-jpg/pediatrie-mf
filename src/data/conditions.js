@@ -27,7 +27,7 @@ const C = [
  no:[], src:[["NICE NG195, actualizat mai 2026",NICE("ng195")]]},
 
 {id:"colica", g:"nn", n:"Colica sugarului", alt:"plâns, colici, infant distress syndrome, sindromul de disconfort al sugarului, Rome V",
- key:"Diagnostic de excludere la un sugar care crește normal; colica izolată nu justifică excluderea laptelui de vacă.", nou:"Rome V",
+ key:"Diagnostic de excludere la un sugar care crește normal; colica izolată nu justifică excluderea laptelui de vacă. La sân: *L. reuteri* DSM 17938 [[10⁸ UFC/zi, ≥21 zile]].", nou:"Rome V",
  sym:["Plâns și agitație prelungite, recurente, pe care părinții nu le pot preveni sau opri.","Debut înainte de 5 luni; sugar afebril, cu creștere normală."],
  dx:["Rome V (2026) o redenumește „sindromul de disconfort al sugarului” și cere o evaluare care să excludă altă cauză.","Pragul Rome IV (≥3 h/zi, ≥3 zile din 7) este doar criteriu de cercetare.","Colica singură nu este semn de alergie la proteinele laptelui de vacă."],
  alarm:["Febră, stagnare ponderală, vărsături, sânge în scaun."],
@@ -36,7 +36,7 @@ const C = [
  src:[["Rome V, 2026","https://theromefoundation.org/rome-v-criteria/"],["ESPGHAN, probioticele, 2023",""],["ESPGHAN, alergia la laptele de vacă, 2024","https://pubmed.ncbi.nlm.nih.gov/38374567/"]]},
 
 {id:"rge", g:"nn", n:"Reflux gastroesofagian (RGE) și boala de reflux (BRGE)", alt:"regurgitații, regurgitări, vărsături, reflux, IPP, omeprazol, esomeprazol",
- key:"Regurgitațiile la un sugar care crește normal nu se tratează cu medicamente; IPP doar pentru esofagită erozivă.",
+ key:"Regurgitațiile la un sugar care crește normal nu se tratează cu medicamente; IPP doar pentru esofagită erozivă, [[4–8 săptămâni]].",
  sym:["RGE: regurgitații după masă la un sugar care crește normal.","BRGE: refuz alimentar, iritabilitate, stagnare ponderală, esofagită."],
  dx:["Diagnostic clinic.","Nu se face probă terapeutică cu IPP ca test diagnostic la sugar.","Rome V (2026) nu mai listează regurgitația sugarului ca entitate separată."],
  alarm:["Scădere ponderală, letargie, febră.","Debut după 6 luni sau persistență peste 12–18 luni.","Fontanelă bombată, convulsii, micro- sau macrocefalie.","Vărsături în jet (stenoză pilorică), nocturne sau bilioase.","Hematemeză, rectoragie, diaree cronică, distensie abdominală."],
@@ -45,7 +45,7 @@ const C = [
  src:[["NASPGHAN/ESPGHAN 2018 (fără actualizare)","https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5958910/"],["NICE NG1 (permite probă cu alginat 1–2 săptămâni)",NICE("ng1")]]},
 
 {id:"aplv", g:"nn", n:"Alergia la proteinele laptelui de vacă (APLV)", alt:"alergie lapte, CMPA, hidrolizat, aminoacizi, CoMiSS, FPIES, proctocolită",
- key:"Supradiagnosticată (prevalență reală sub 1%): eliminarea diagnostică este urmată obligatoriu de test de provocare orală.",
+ key:"Supradiagnosticată (prevalență reală sub 1%): eliminare diagnostică [[2–4 săptămâni]] (non-IgE) sau [[1–2 săptămâni]] (IgE), urmată obligatoriu de test de provocare orală.",
  sym:["IgE-mediată: urticarie, angioedem, vărsături imediate, anafilaxie.","Non-IgE: rectoragie (proctocolită), vărsături, diaree, eczemă, stagnare ponderală, enterocolită indusă de proteine alimentare (FPIES)."],
  dx:["Dietă de eliminare diagnostică 2–4 săptămâni (non-IgE) sau 1–2 săptămâni (IgE), apoi test de provocare orală.","Excepții de la provocare: anafilaxie, IgE specifice foarte mari.","Scorul CoMiSS este instrument de alertă, nu de diagnostic; pragul nu este consensual."],
  alarm:["Anafilaxie, stagnare ponderală, FPIES severă → specialist."],
@@ -54,7 +54,7 @@ const C = [
  src:[["ESPGHAN 2024","https://pubmed.ncbi.nlm.nih.gov/38374567/"],["WAO DRACMA 2024","https://pubmed.ncbi.nlm.nih.gov/38706757/"]]},
 
 {id:"mughet", g:"nn", n:"Candidoză orală (mughet)", alt:"candida, plăci albe, nistatină, miconazol",
- key:"Sub 4 luni: nistatină; miconazolul gel oral este contraindicat (risc de aspirație).",
+ key:"Sub 4 luni: nistatină [[100.000 UI/ml, 1 ml de 4 ori/zi]]; miconazolul gel oral este contraindicat (risc de aspirație).",
  sym:["Plăci albe aderente pe mucoasa jugală și pe limbă, care nu se șterg ușor.","Uneori refuz alimentar."],
  dx:["Clinic.","Se caută dermatita de scutec candidozică asociată."],
  alarm:["Persistență peste 14 zile de tratament → reevaluare."],
@@ -90,7 +90,7 @@ const C = [
  src:[["AAPOS, sept. 2025","https://aapos.org/glossary/nasolacrimal-duct-obstruction"],["NICE NG195 (conjunctivita neonatală)",NICE("ng195")]], note:"Sursă americană; nu există ghid european."},
 
 {id:"granulom", g:"nn", n:"Granulom ombilical", alt:"ombilic, buric, omfalită, sare, nitrat de argint",
- key:"Sarea de bucătărie aplicată de părinți rezolvă aproximativ 9 din 10 cazuri.",
+ key:"Sarea de bucătărie aplicată de părinți [[de 2 ori/zi, 3 zile]] rezolvă aproximativ 9 din 10 cazuri.",
  sym:["Țesut roz, umed, la baza ombilicului după căderea bontului; secreție seroasă."],
  dx:["Clinic.","Diagnostic diferențial: polip ombilical, persistența canalului omfalo-enteric sau a urahusului (secreție fecaloidă ori urinară)."],
  alarm:["Omfalită (secreție purulentă, eritem, căldură sau edem periombilical) → spital: hemocultură, recoltare pentru cultură, flucloxacilină + gentamicină IV."],
@@ -100,7 +100,7 @@ const C = [
 
 /* ───────── SUGAR ȘI COPIL MIC ───────── */
 {id:"febra", g:"sm", n:"Febra fără focar evident (sub 5 ani)", alt:"febră, semafor, antipiretic, paracetamol, ibuprofen, Panadol, Nurofen, Ibufen, Paduden, Bioflu, Kawasaki",
- key:"Orice semn roșu din semafor → examinare în 2 h sau trimitere de urgență; antipiretic doar pentru disconfort.",
+ key:"Semn roșu din semafor → examinare în 2 h sau trimitere de urgență. Antipiretic doar pentru disconfort: paracetamol [[10–15 mg/kg la 4–6 h]] sau ibuprofen [[20–30 mg/kg/zi]].",
  sym:["Febră fără sursă clinică aparentă."],
  dx:["Sistemul „semafor” NICE: semnele roșii înseamnă risc înalt, cele galbene risc intermediar.","Galben: 3–6 luni cu ≥39 °C; febră ≥5 zile (se ia în considerare boala Kawasaki)."],
  alarm:["**Sub 3 luni cu ≥38 °C.**","Paloare, tegumente marmorate sau cianotice.","Nu răspunde la stimuli sociali, pare grav bolnav, nu se trezește; plâns slab, ascuțit sau continuu.","Geamăt, FR >60, tiraj moderat sau sever; turgor scăzut.","Erupție care nu pălește la presiune, fontanelă bombată, redoare de ceafă, status epileptic, semne focale.","Orice semn roșu → examinare clinică în cel mult 2 h sau trimitere de urgență la pediatrie."],
@@ -118,7 +118,7 @@ const C = [
  src:[["EPOS 2020","https://www.rhinologyjournal.com/Documents/Supplements/EPOS2020_executive_summary.pdf"]]},
 
 {id:"oma", g:"sm", n:"Otită medie acută (OMA)", alt:"otalgie, ureche, urechea, otoree, amoxicilină, Augmentin, amoxiclav, Klacid",
- key:"Majoritatea se vindecă fără antibiotic; rețeta amânată se folosește dacă nu se ameliorează în 3 zile.",
+ key:"Majoritatea se vindecă fără antibiotic; rețeta amânată se folosește dacă nu se ameliorează în 3 zile. La nevoie: amoxicilină [[5–7 zile]], 125/250/500 mg ×3/zi pe vârstă.",
  sym:["Otalgie (la sugar: iritabilitate, tragerea urechii), febră, otoree.","Evoluție de ~3 zile, până la o săptămână."],
  dx:["Otoscopie: timpan bombat, opac, hiperemic, sau otoree acută."],
  alarm:["Mastoidită, meningită, abces intracranian, tromboză de sinus venos, paralizie facială → spital.","Copil cu stare generală alterată → antibiotic imediat."],
@@ -136,7 +136,7 @@ const C = [
  src:[["NICE NG9, actualizat aug. 2021",NICE("ng9")],["EMA: nirsevimab, vaccin matern anti-VSR",""]]},
 
 {id:"crup", g:"sm", n:"Laringotraheită acută (crup)", alt:"tuse lătrătoare, stridor, laringită, dexametazonă, Dexamed",
- key:"Dexametazonă orală doză unică la orice grad de severitate, inclusiv în formele ușoare.",
+ key:"Dexametazonă [[0,15 mg/kg oral, doză unică]] la orice grad de severitate, inclusiv în formele ușoare.",
  sym:["Tuse lătrătoare, disfonie, stridor inspirator, detresă respiratorie."],
  dx:["Clinic.","Ușor: tuse lătrătoare, fără stridor sau detresă în repaus.","Moderat: stridor sau detresă în repaus.","Sever: ca la moderat, plus agitație sau letargie."],
  alarm:["Efort respirator persistent la 1–2 h după tratament, FR >60, aspect toxic → internare."],
@@ -145,7 +145,7 @@ const C = [
  src:[["NHS Highland, oct. 2024","https://www.rightdecisions.scot.nhs.uk/tam-treatments-and-medicines-nhs-highland/paediatric-therapeutic-guidelines/respiratory-paediatric-guidelines/croup-paediatric-guidelines/"],["Cochrane 2023","https://pubmed.ncbi.nlm.nih.gov/36626194/"]], uv:"NICE CKS (crup) nu a putut fi verificat."},
 
 {id:"gea", g:"sm", n:"Gastroenterită acută (GEA)", alt:"diaree, vărsături, deshidratare, durere de burtă, SRO, Smecta, Enterol, Hidrasec, rotavirus, probiotice",
- key:"Rehidratare orală cu soluție hipoosmolară și alimentație continuată; fără loperamid și fără antibiotic de rutină.",
+ key:"Cu deshidratare clinică: SRO hipoosmolară [[50 ml/kg în 4 h]] plus întreținere; fără deshidratare, alimentație și lichide continuate. Fără loperamid și fără antibiotic de rutină.",
  sym:["≥3 scaune moi sau apoase în 24 h, cu sau fără febră și vărsături; durată sub 7 zile."],
  dx:["Scala clinică de deshidratare: 0 = absentă; 1–4 = ușoară; 5–8 = moderată sau severă.","Analizele nu sunt necesare de rutină."],
  alarm:["Deshidratare moderată sau severă, refuzul lichidelor, aspect toxic, diaree sanguinolentă cu febră."],
@@ -154,7 +154,7 @@ const C = [
  src:[["ESPGHAN/ESPID 2014 (încă în vigoare)",""],["ESPGHAN, probioticele, 2023",""],["NICE CG84",NICE("cg84")]]},
 
 {id:"itu", g:"sm", n:"Infecție urinară febrilă (ITU)", alt:"pielonefrită, cistită, urocultură, pipi, bandeletă, cistografie, reflux vezicoureteral",
- key:"Fără pungi colectoare pentru urocultură; tratament de 4–7 zile (EAU 2026).", nou:"2026",
+ key:"Fără pungi colectoare pentru urocultură; tratament [[4–7 zile]] (EAU 2026), oral dacă nu e grav și are peste 2 luni.", nou:"2026",
  sym:["Sugar: febră, iritabilitate, vărsături.","Copil mai mare: disurie, polakiurie, enurezis nou apărut."],
  dx:["Fără control sfincterian: cateterism sau puncție suprapubiană pentru urocultură; jetul „prins din zbor” doar pentru screening.","**Fără pungi colectoare.**","3 luni–3 ani: bandeletă; leucocit-esteraza și nitriții negativi → fără antibiotic.","Urocultură pozitivă: 10³–10⁴ UFC/mL dintr-un singur germen (cateter sau jet), orice număr la puncție suprapubiană; sub 4 luni cu febră: 10³ UFC/mL."],
  alarm:["Sub 3 luni: microscopie și urocultură urgent, plus trimitere.","Copil grav sau sub 2 luni: tratament parenteral."],
@@ -163,7 +163,7 @@ const C = [
  src:[["EAU/ESPU, ediția 2026","https://uroweb.org/guidelines/paediatric-urology/chapter/urinary-tract-infections-in-children"],["NICE NG224",NICE("ng224")],["NICE NG111",NICE("ng111")]]},
 
 {id:"convulsii", g:"sm", n:"Convulsii febrile", alt:"convulsie, criză febrilă, midazolam, Buccolam, diazepam, Desitin",
- key:"După o convulsie simplă, la un copil care arată bine, nu se fac EEG, analize sau imagistică de rutină.",
+ key:"Convulsie simplă la un copil care arată bine: fără EEG, analize sau imagistică de rutină. Criză >5 min: midazolam bucal [[2,5 mg]] (6 luni–<1 an), [[5 mg]] (1–<5 ani).",
  sym:["6 luni–5 ani, cu febră, fără infecție a SNC.","Simple: generalizate, sub 15 min, nerepetate în 24 h.","Complexe: focale, peste 15 min sau repetate în 24 h."],
  dx:["Puncție lombară la semne meningeale.","La 6–12 luni: opțiune dacă vaccinarea Hib sau pneumococică e incompletă ori necunoscută, sau dacă a primit deja antibiotic."],
  alarm:["Criză peste 5 min → benzodiazepină și urgență.","Semne meningeale, convulsie complexă, prima convulsie febrilă (evaluare medicală imediată)."],
@@ -172,7 +172,7 @@ const C = [
  src:[["Revizie italiană 2024","https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11089695/"],["LICE 2009; AAP 2011",""],["RCP Buccolam (UE), diazepam intrarectal (RO)",""]], note:"Nu există ghid european."},
 
 {id:"atopica", g:"sm", n:"Dermatită atopică", alt:"eczemă, emolienți, dermatocorticoizi, tacrolimus, pimecrolimus, dupilumab",
- key:"Emolienți zilnic și dermatocorticoid în puseu; fără diete de excludere fără istoric de reacție la aliment.",
+ key:"Emolienți zilnic și dermatocorticoid în puseu ([[5–7 zile]] pe față și gât, [[7–14 zile]] în rest); fără diete de excludere fără istoric de reacție la aliment.",
  sym:["Prurit, xeroză.","Sugar: obraji, scalp, trunchi, fețe de extensie; zona scutecului cruțată. Ulterior: pliurile."],
  dx:["Diagnostic clinic.","Severitate: EASI, SCORAD, POEM."],
  alarm:["Formă severă sau refractară → dermatolog.","Sub 12 luni: dermatocorticoizi de potență mare doar sub supraveghere de specialist."],
@@ -181,7 +181,7 @@ const C = [
  src:[["EuroGuiDerm v4.1, apr. 2026 (capitolele topice din 2022)","https://guidelines.edf.one/guidelines/atopic-ezcema"]]},
 
 {id:"anemie", g:"sm", n:"Anemie feriprivă", alt:"fier, feritină, hemoglobină, paloare, lapte de vacă",
- key:"Pragul OMS al hemoglobinei la 6–23 luni a coborât la 105 g/L (2024).", nou:"OMS 2024",
+ key:"Pragul OMS al hemoglobinei la 6–23 luni a coborât la 105 g/L (2024). Tratament: fier elemental [[2–6 mg/kg/zi]], [[8–12 săptămâni]].", nou:"OMS 2024",
  sym:["Adesea asimptomatică; paloare."],
  dx:["Hemoglobină <105 g/L la 6–23 luni și <110 g/L la 24–59 luni.","Feritină <12 µg/L, sau <30 µg/L în prezența inflamației.","Factori de risc: greutate mică la naștere, consum mare de lapte de vacă, dietă săracă în fier."],
  alarm:["Lipsa răspunsului la fier oral (Hb nu crește la 2–4 săptămâni) → investigații."],
@@ -200,7 +200,7 @@ const C = [
 
 /* ───────── PREȘCOLAR ───────── */
 {id:"faringita", g:"ps", n:"Faringoamigdalită acută streptococică", alt:"angină, amigdalită, gât roșu, streptococ, SGA, SBHGA, Centor, FeverPAIN, penicilină, Ospen",
- key:"Antibiotic doar la scor mare (FeverPAIN 4–5 sau Centor 3–4); sub 3 ani infecția cu SBHGA (streptococ β-hemolitic de grup A) este rară.",
+ key:"Antibiotic doar la scor mare (FeverPAIN 4–5 sau Centor 3–4): penicilină V [[10 zile]]; sub 3 ani infecția cu SBHGA (streptococ β-hemolitic de grup A) este rară.",
  sym:["Odinofagie, febră, adenopatii laterocervicale dureroase, exsudat amigdalian, fără tuse și coriză."],
  dx:["FeverPAIN 0–1 sau Centor 0–2 → fără antibiotic.","FeverPAIN 2–3 → fără antibiotic sau rețetă amânată.","FeverPAIN 4–5 sau Centor 3–4 → antibiotic imediat sau amânat.","ESCMID: test antigenic rapid la Centor 3–4; după test negativ nu e nevoie de cultură.","Sub 3 ani testarea nu e indicată (excepție: frate cu SBHGA)."],
  alarm:["Abces periamigdalian, abces cervical profund, sindrom Lemierre → trimitere."],
@@ -209,7 +209,7 @@ const C = [
  src:[["ESCMID 2012 (actualizare în lucru)","https://pubmed.ncbi.nlm.nih.gov/22432746/"],["NICE NG84",NICE("ng84")]]},
 
 {id:"wheezing", g:"ps", n:"Wheezing recurent al preșcolarului", alt:"bronșită obstructivă, astm, salbutamol, Ventolin, corticoid inhalator, budesonid, Pulmicort, Flixotide, montelukast, Singulair, GINA",
- key:"Salbutamol la nevoie pentru toți; corticoid inhalator zilnic, probă 2–3 luni, dacă simptomele apar de peste 2 ori pe săptămână.",
+ key:"Salbutamol la nevoie pentru toți; corticoid inhalator zilnic, probă [[2–3 luni]] (budesonid nebulizat [[500 µg/zi]]), dacă simptomele apar de peste 2 ori pe săptămână.",
  sym:["Episoade repetate de wheezing, tuse și dispnee, declanșate de obicei de viroze."],
  dx:["Definiție ERS: 0–<6 ani, wheezing confirmat de medic cel puțin o dată, mai mult de un episod.","Fenotipurile „viral episodic” și „cu multipli factori declanșatori” nu prezic răspunsul la tratament.","Eozinofilia sanguină și sensibilizarea la aeroalergeni prezic răspunsul la corticoizii inhalatori."],
  alarm:["Lipsa răspunsului la 4–6 pufuri de salbutamol, semne de criză severă → urgență."],
@@ -218,7 +218,7 @@ const C = [
  src:[["GINA 2026","https://ginasthma.org/wp-content/uploads/2026/05/GINA-2026-Strategy-Report-WMS.pdf"],["Declarația ERS 2024","https://pubmed.ncbi.nlm.nih.gov/38843917/"],["NICE/BTS/SIGN NG245 (2024)",NICE("ng245")]], note:"Nu există ghid ERS de practică pentru wheezingul preșcolar, doar declarația din 2024."},
 
 {id:"pneumonie", g:"ps", n:"Pneumonie comunitară", alt:"pneumopatie, bronhopneumonie, amoxicilină 3 zile, CAP-IT",
- key:"Forma non-severă: amoxicilină 3 zile (NICE 2025).", nou:"2025",
+ key:"Forma non-severă: amoxicilină [[3 zile]] (NICE 2025), 125/250/500 mg ×3/zi pe vârstă.", nou:"2025",
  sym:["Febră, tuse, tahipnee, tiraj, raluri crepitante localizate."],
  dx:["Sub 5 ani cu febră: evaluare după sistemul semafor (NG143).","Niciun scor predictiv recomandat; fără microbiologie de rutină în formele non-severe."],
  alarm:["În asistența primară: se ia în considerare trimiterea sau consultul pediatric.","Semne de severitate → spital."],
@@ -227,7 +227,7 @@ const C = [
  src:[["NICE NG250, sept. 2025 (înlocuiește NG138)",NICE("ng250")]], note:"Nu există ghid ERS sau ESPID de tratament."},
 
 {id:"constipatie", g:"ps", n:"Constipație funcțională", alt:"scaune rare, PEG, macrogol, Forlax, lactuloză, Duphalac, encoprezis, Rome V",
- key:"PEG este prima linie, atât pentru dezimpactare, cât și pentru întreținere.", nou:"2026",
+ key:"PEG este prima linie: dezimpactare [[1–1,5 g/kg/zi, maximum 6 zile]], întreținere [[0,4–0,8 g/kg/zi]].", nou:"2026",
  sym:["Scaune rare, dure, dureroase; postură de reținere; incontinență fecală."],
  dx:["Rome V (2026), un singur set pentru toți copiii: ≥2 în ultima lună dintre: ≤2 scaune/săptămână; incontinență săptămânală (la copilul cu control sfincterian); postură de reținere; scaune dureroase sau dure (Bristol 1–2); masă fecală în rect; scaune voluminoase."],
  alarm:["Eliminare întârziată a meconiului.","Sânge în scaun fără fisură.","Stagnare ponderală, distensie abdominală severă."],
@@ -236,7 +236,7 @@ const C = [
  src:[["ESPGHAN/NASPGHAN 2026","https://europepmc.org/article/PMC/PMC13446596"],["Rome V, 2026","https://theromefoundation.org/rome-v-criteria/"]]},
 
 {id:"scarlatina", g:"ps", n:"Scarlatină", alt:"streptococ, erupție șmirghel, limbă zmeurie, iGAS",
- key:"Penicilină V 10 zile; excludere din colectivitate 24 h după începerea antibioticului.",
+ key:"Penicilină V [[10 zile]]; excludere din colectivitate 24 h după începerea antibioticului.",
  sym:["Odinofagie, febră, cefalee, vărsături.","După 12–48 h: erupție aspră „ca șmirghelul” pe torace și abdomen.","Față congestionată cu paloare peribucală, limbă zmeurie; ulterior descuamare la vârful degetelor."],
  dx:["Clinic. Exsudatul faringian ajută, dar unul negativ nu exclude boala; nu se așteaptă cultura."],
  alarm:["Complicații precoce: otită, abces periamigdalian, celulită, pneumonie, meningită.","Tardive: glomerulonefrită, reumatism articular acut.","Infecție invazivă cu SBHGA: suspiciune crescută mai ales cu varicelă asociată; contacții din familie au risc crescut 2 luni."],
@@ -272,7 +272,7 @@ const C = [
  src:[["NHS, apr. 2024",""],["ECDC, iun. 2024 (creștere în UE 2023–2024)",""]]},
 
 {id:"impetigo", g:"ps", n:"Impetigo", alt:"cruste melicerice, stafilococ, acid fusidic, peroxid de hidrogen",
- key:"Forma localizată: cremă cu peroxid de hidrogen 1% înaintea antibioticului topic.",
+ key:"Forma localizată: cremă cu peroxid de hidrogen 1% [[de 2–3 ori/zi, 5 zile]], înaintea antibioticului topic.",
  sym:["Non-bulos: vezicule sau pustule care se sparg și lasă cruste galben-maronii.","Bulos: bule cu conținut clar."],
  dx:["Clinic; la reevaluare, recoltare pentru cultură și excluderea herpesului simplex."],
  alarm:["Celulită, boală sistemică, impetigo extins la imunodeprimat → spital.","Forma buloasă (mai ales ≤1 an), recurențe frecvente → consult de specialitate."],
@@ -290,7 +290,7 @@ const C = [
  src:[["Cochrane CD001211, 2023",""],["MHRA, iul. 2021",""],["NHS, apr. 2024",""]], uv:"Criteriile NICE CKS pentru antibiotic nu au putut fi verificate."},
 
 {id:"oxiuri", g:"ps", n:"Oxiuriază", alt:"viermi, enterobius, mebendazol, Vermox, albendazol, Zentel, Vermigal, prurit anal",
- key:"Sub 6 ani, în România: albendazol suspensie 400 mg doză unică (Vermox 100 mg e contraindicat sub 6 ani).", nou:"RCP RO",
+ key:"Sub 6 ani, în România: albendazol suspensie [[400 mg doză unică]] (Vermox 100 mg e contraindicat sub 6 ani).", nou:"RCP RO",
  sym:["Prurit anal sau vulvar nocturn, somn agitat, viermi vizibili."],
  dx:["Clinic: viermi vizibili perianal sau în scaun."],
  alarm:[],
@@ -299,7 +299,7 @@ const C = [
  src:[["NHS, dec. 2023",""],["RCP Vermox (RO, 2016), Vermigal Novo (RO, 2014)",""]], uv:"Nu s-a verificat dacă RCP-urile românești consultate sunt versiunile curente."},
 
 {id:"pediculoza", g:"ps", n:"Pediculoză a capului", alt:"păduchi, lindini, dimeticonă, Hedrin, Paranit, pieptene",
- key:"Diagnosticul cere un păduche viu găsit cu pieptenul de detecție.",
+ key:"Diagnosticul cere un păduche viu găsit cu pieptenul de detecție; dimeticonă 4% [[≥8 h, repetată după 7 zile]] sau pieptănare umedă în zilele 1, 5, 9 și 13.",
  sym:["Prurit al scalpului."],
  dx:["Doar găsirea unui păduche viu cu pieptenul de detecție confirmă diagnosticul."],
  alarm:[],
@@ -308,7 +308,7 @@ const C = [
  src:[["NHS, apr. 2024",""],["RCP Hedrin 4%",""]], uv:"Produsele cu dimeticonă autorizate în România nu au fost verificate."},
 
 {id:"urticarie", g:"ps", n:"Urticarie acută", alt:"blânde, bubițe, angioedem, antihistaminic, Aerius, Zyrtec, alergie",
- key:"Antihistaminic de generația a II-a zilnic; fără investigații de rutină.", nou:"2026",
+ key:"Antihistaminic de generația a II-a zilnic (desloratadină [[1,25 mg/zi]] la 1–5 ani); fără investigații de rutină.", nou:"2026",
  sym:["Papule și plăci eritemato-edematoase, pruriginoase, fugace, cu sau fără angioedem; durată ≤6 săptămâni."],
  dx:["Cel mai des după infecții respiratorii (inclusiv COVID-19).","**Fără investigații de rutină** (recomandare puternică împotrivă).","Teste doar la suspiciune de alergie alimentară (copil sensibilizat) sau medicamentoasă (AINS)."],
  alarm:["Anafilaxie (afectare respiratorie, circulatorie) → adrenalină intramuscular, prima linie."],

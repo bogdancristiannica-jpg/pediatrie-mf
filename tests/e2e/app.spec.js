@@ -28,10 +28,10 @@ test.describe("încărcare și navigare", () => {
     }
   });
 
-  test("fișa are ordinea: decizie, alarmă, tratament, nu se recomandă, diagnostic, simptome, sursă", async ({ page }) => {
+  test("fișa are ordinea clinică: decizie, alarmă, simptome, diagnostic, tratament, sursă", async ({ page }) => {
     await page.goto("/#crup");
     const heads = await page.locator(".sheet .key b, .sheet .blk h2, .sheet .src strong").allTextContents();
-    expect(heads.map((t) => t.trim())).toEqual(["Decizia-cheie", "Semne de alarmă / trimitere", "Tratament", "Diagnostic", "Simptome", "Sursa"]);
+    expect(heads.map((t) => t.trim())).toEqual(["Decizia-cheie", "Semne de alarmă / trimitere", "Simptome", "Diagnostic", "Tratament", "Sursa"]);
     await expect(page.locator(".sheet .d").first()).toContainText("0,15");
   });
 

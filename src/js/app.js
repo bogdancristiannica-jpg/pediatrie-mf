@@ -44,7 +44,7 @@ function renderIndex(cur) {
 
 function viewHome() {
   return (
-    `<h1 class="vh">Fișe pediatrice 0–6 ani</h1><p class="lead">35 de afecțiuni frecvente, pe grupe de vârstă. Fiecare fișă are aceeași ordine: decizia-cheie, semne de alarmă, tratament, ce nu se recomandă, diagnostic, simptome, sursa. Unelte: <a href="#calc">calculator de doze</a>, <a href="#scoruri">scoruri clinice</a>, <a href="#abx">antibiotice pe o pagină</a>, <a href="#alarma">semne de alarmă</a>, <a href="#excludere">excludere din colectivitate</a>.</p>` +
+    `<h1 class="vh">Fișe pediatrice 0–6 ani</h1><p class="lead">35 de afecțiuni frecvente, pe grupe de vârstă. Fiecare fișă are aceeași ordine: decizia-cheie (cu doza principală), semne de alarmă, simptome, diagnostic, tratament, ce nu se recomandă, sursa. Unelte: <a href="#calc">calculator de doze</a>, <a href="#scoruri">scoruri clinice</a>, <a href="#abx">antibiotice pe o pagină</a>, <a href="#alarma">semne de alarmă</a>, <a href="#excludere">excludere din colectivitate</a>.</p>` +
     Object.keys(G)
       .map((g) => `<div class="sec-h"><h2>${G[g].t}</h2><span>${G[g].s}</span></div>` + rows(C.filter((c) => c.g === g)))
       .join("")
@@ -67,10 +67,10 @@ function viewSheet(c) {
     ${c.nou ? `<p class="alt">${tagHtml(c)}</p>` : ""}
     <div class="key"><b>Decizia-cheie</b>${fmt(c.key)}</div>
     ${c.alarm.length ? `<section class="blk alarm"><h2>${ICON_ALARM}Semne de alarmă / trimitere</h2>${list(c.alarm)}</section>` : ""}
+    <section class="blk"><h2>Simptome</h2>${list(c.sym)}</section>
+    <section class="blk"><h2>Diagnostic</h2>${list(c.dx)}</section>
     <section class="blk tx"><h2>Tratament</h2>${list(c.tx)}</section>
     ${c.no.length ? `<section class="blk no"><h2>Nu se recomandă</h2>${list(c.no)}</section>` : ""}
-    <section class="blk"><h2>Diagnostic</h2>${list(c.dx)}</section>
-    <section class="blk"><h2>Simptome</h2>${list(c.sym)}</section>
     <div class="src"><strong>Sursa</strong><ul>${srcs}</ul>${c.note ? `<p>${fmt(c.note)}</p>` : ""}${c.uv ? `<p><span class="uv">Neverificat</span> ${fmt(c.uv)}</p>` : ""}</div>
     <nav class="pager" aria-label="Afecțiuni din aceeași grupă">
       ${prev ? `<a href="#${prev.id}">← ${esc(prev.n)}</a>` : "<span></span>"}

@@ -39,7 +39,7 @@ flowchart TD
   H[location.hash] --> R{route}
   Q[#q căutare] --> R
   R -- "#acasa / #nn / #sm / #ps" --> L[listă de fișe<br/>rows]
-  R -- "#id-fisă" --> F[viewSheet<br/>decizie → alarmă → tratament → nu → dx → simptome → sursă]
+  R -- "#id-fisă" --> F[viewSheet<br/>decizie (cu doza) → alarmă → simptome → dx → tratament → nu → sursă]
   R -- "#calc" --> C[viewCalc → calcGroups w, luni]
   R -- "#scoruri" --> SC[viewScores → scoreOut]
   R -- "#abx / #alarma / #excludere" --> PG[viewAbx / viewAlarm / viewExcl]
