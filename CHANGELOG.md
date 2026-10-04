@@ -3,6 +3,15 @@
 Formatul urmează [Keep a Changelog](https://keepachangelog.com/ro/1.1.0/); versiunile urmează [SemVer](https://semver.org/lang/ro/).
 Schimbările de conținut clinic poartă sursa în paranteză.
 
+## [0.1.2] — 2026-10-04
+
+### Adăugat
+
+- CLAUDE.md: secțiunea „Automatizări Cloudflare” (agent setup / MCP în loc de pași manuali de panou).
+- `wrangler.jsonc` și `npm run deploy`: publicare pe Cloudflare Workers cu fișiere statice (Workers Builds sau manual de pe
+  Mac), pe lângă varianta Pages. README „Publicare” rescris după documentația Cloudflare din 4 oct. 2026, cu ambele variante
+  și etichetele actuale din panou.
+
 ## [0.1.1] — 2026-10-03
 
 ### Schimbat
