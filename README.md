@@ -8,8 +8,8 @@ semnele de alarmă și perioadele de excludere din colectivitate.
 Pagina este un singur fișier HTML, fără server, fără cont, fără urmărire. Merge pe iPhone (Safari), pe Chrome
 (Windows/Mac) și fără internet după prima deschidere.
 
-**Adresa publicată:** pe Cloudflare, `pediatrie-mf.pages.dev` (varianta Pages) sau `pediatrie-mf.<subdomeniu>.workers.dev`
-(varianta Workers); vezi „Publicare” mai jos. Adresa definitivă se trece aici după prima publicare.
+**Adresa publicată:** https://pediatrie-mf.pages.dev (Cloudflare Pages, din `main`; publicat 4 octombrie 2026). Varianta
+Workers (`wrangler.jsonc`) rămâne disponibilă; vezi „Publicare”.
 
 > Conținutul este un instrument de lucru pentru medici, nu înlocuiește judecata clinică și nici RCP-ul produsului prescris.
 > Dozele sunt calculate aritmetic din sursele citate pe fiecare rând; plafoanele și vârstele minime se verifică în RCP-ul
