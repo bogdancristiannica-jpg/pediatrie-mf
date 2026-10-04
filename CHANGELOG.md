@@ -7,6 +7,7 @@ Schimbările de conținut clinic poartă sursa în paranteză.
 
 ### Adăugat
 
+- CLAUDE.md: secțiunea „Automatizări Cloudflare” (agent setup / MCP în loc de pași manuali de panou).
 - `wrangler.jsonc` și `npm run deploy`: publicare pe Cloudflare Workers cu fișiere statice (Workers Builds sau manual de pe
   Mac), pe lângă varianta Pages. README „Publicare” rescris după documentația Cloudflare din 4 oct. 2026, cu ambele variante
   și etichetele actuale din panou.

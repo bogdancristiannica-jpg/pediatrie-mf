@@ -42,6 +42,23 @@ Fără server, fără cont, fără urmărire, fără date personale. Publicat pe
 - Pentru interfață pe iPhone: skill-ul `ios-simulator` (simulatorul rulează pe mașina locală, nu în cloud).
 - Artefactul claude.ai se republică din `dist/artifact.html` (nu din `index.html`: viewer-ul adaugă el doctype și head).
 
+## Automatizări Cloudflare (lecție din 4 oct. 2026)
+
+Nu se dictează pași de panou pentru Cloudflare; se lucrează prin agent. Pe Mac, în rădăcina depozitului:
+
+```
+claude
+/plugin marketplace add cloudflare/skills
+/plugin install cloudflare@cloudflare
+```
+
+Asta instalează skill-urile Cloudflare și serverele MCP oficiale (API complet în „Code Mode”, Workers Builds, Bindings,
+Observability, Documentation). Autorizare OAuth la primul apel. De atunci, agentul creează el proiectul Pages sau
+Worker-ul, conectează depozitul prin Workers Builds, setează variabilele și domeniul; omul doar aprobă. În sesiunile
+cloud (claude.ai) același lucru se obține adăugând conectorul `https://mcp.cloudflare.com/mcp` în Settings → Connectors.
+Sursa: developers.cloudflare.com/agent-setup/claude-code/ (29 sept. 2026). Aceeași regulă pentru orice panou (GitHub,
+Vercel): întâi verifică dacă există conector sau MCP, abia apoi pași manuali.
+
 ## Harta codului
 
 | Fișier                   | Rol                                                                                       |
