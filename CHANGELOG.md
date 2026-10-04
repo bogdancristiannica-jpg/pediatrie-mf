@@ -3,6 +3,15 @@
 Formatul urmează [Keep a Changelog](https://keepachangelog.com/ro/1.1.0/); versiunile urmează [SemVer](https://semver.org/lang/ro/).
 Schimbările de conținut clinic poartă sursa în paranteză.
 
+## [0.1.3] — 2026-10-04
+
+### Schimbat
+
+- Ordinea secțiunilor unei fișe revine la cea clinică: decizia-cheie, semne de alarmă, simptome, diagnostic, tratament,
+  nu se recomandă, sursa (decizia lui Bogdan). Ca doza să rămână pe primul ecran al telefonului, doza principală intră
+  în rândul „Decizia-cheie” la 22 de fișe; valorile sunt cele deja prezente în secțiunea Tratament a fiecărei fișe, fără
+  conținut clinic nou.
+
 ## [0.1.2] — 2026-10-04
 
 ### Adăugat
